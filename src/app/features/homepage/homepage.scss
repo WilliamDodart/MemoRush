@@ -24,6 +24,7 @@
     &__button {
         font-size: 2rem;
         width: 65vw;
+        max-width: 450px;
         padding: 1rem 0;
 
         &:last-child {
@@ -34,33 +35,12 @@
 
 @media screen and (min-width: 768px) {
     .homepage {
-        &__title {
-            font-size: 15vw;
-        }
-
         &__button {
-            font-size: 3.5rem;
-            width: 50vw
+            font-size: 2.5rem;
         }
 
         &__separator {
-            width: 20%
-        }
-    }
-}
-
-@media screen and (min-width: 1340px) {
-    .homepage {
-        &__title {
-            font-size: 20rem;
-        }
-
-        &__button {
-            width: 30vw
-        }
-
-        &__separator {
-            width: 10%
+            width: 200px;
         }
     }
 }

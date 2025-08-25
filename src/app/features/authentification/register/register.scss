@@ -6,6 +6,10 @@
     align-items: center;
     justify-content: center;
 
+    &__title {
+        margin-bottom: 0;
+    }
+
     &__container {
         width: 100%;
         display: flex;
@@ -19,6 +23,7 @@
         display: flex;
         flex-direction: column;
         width: 85%;
+        max-width: 400px;
     }
 }
 
@@ -35,4 +40,21 @@
     font-weight: 600;
     margin: 4rem 0;
     padding: 1rem 0;
+}
+
+@media screen and (min-width: 768px) {
+    .back-button {
+        padding: 0.5rem 2rem;
+        top: 2rem;
+        left: 2rem;
+    }
+}
+
+@media screen and (min-width: 1340px) {
+    .register {
+        &__form {
+            width: 30%;
+            max-width: 500px;
+        }
+    }
 }
