@@ -1,7 +1,7 @@
 <section class="register">
 
     <app-return-button/>
-    
+
     <div class="register__container">
         <h1 class="register__title">MemoRush</h1>
 
@@ -15,7 +15,8 @@
             <label for="validatePassword">Confirmation du mot de passe :</label>
             <input type="password" id="validatePassword" name="validatePassword" [(ngModel)]="validatePassword">
 
-            <button class="validate-button" type="submit">Valider</button>
+            <app-validate-button/>
+            
         </form>
 
     </div>
