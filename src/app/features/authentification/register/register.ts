@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { ReturnButton } from '../../../shared/components/return-button/return-button';
 
 @Component({
   selector: 'app-register',
   imports: [
-    FormsModule
+    FormsModule,
+    ReturnButton
   ],
   templateUrl: './register.html',
   styleUrl: './register.scss'

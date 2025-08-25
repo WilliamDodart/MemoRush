@@ -27,27 +27,11 @@
     }
 }
 
-.back-button {
-    font-size: 2rem;
-    background-color: v.$secondary;
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-}
-
 .validate-button {
     font-size: 2rem;
     font-weight: 600;
     margin: 4rem 0;
     padding: 1rem 0;
-}
-
-@media screen and (min-width: 768px) {
-    .back-button {
-        padding: 0.5rem 2rem;
-        top: 2rem;
-        left: 2rem;
-    }
 }
 
 @media screen and (min-width: 1340px) {

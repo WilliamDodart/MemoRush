@@ -1,0 +1,24 @@
+@use '../../../../style/variables' as v;
+
+.return-button {
+    font-size: 2rem;
+    background-color: v.$secondary;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .return-button {
+        padding: 0.5rem 2rem;
+        top: 2rem;
+        left: 2rem;
+    }
+}
+
+@media screen and (min-width: 1340px) {
+    .return-button {
+        top: 3rem;
+        left: 3rem;
+    }
+}
