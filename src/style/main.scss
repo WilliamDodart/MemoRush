@@ -15,7 +15,20 @@ body {
     padding: 1rem;
 }
 
+h1 {
+  font-family: slant;
+  color: v.$primary;
+  margin-bottom: 3rem;
+  font-size: 18vw;
+}
+
 button {
+  background-color: v.$primary;
+  color: v.$font-white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
   transform: scale(1);
   transition: background-color 0.3s ease, transform 0.2s ease;
 
@@ -31,5 +44,25 @@ button {
   &:focus {
     outline: none;
     box-shadow: 0 0 0 3px rgba(v.$secondary, 1);
+  }
+}
+
+label {
+  color: v.$font-white;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 0.3rem;
+}
+
+input {
+  border-radius: 5px;
+  border: none;
+  padding: 0.5rem;
+  margin-bottom: 1.7rem;
+
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(v.$primary, 1);
   }
 }

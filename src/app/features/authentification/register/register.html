@@ -1,0 +1,23 @@
+<section class="register">
+
+    <button class="back-button">Retour</button>
+
+    <div class="register__container">
+        <h1 class="register__title">MemoRush</h1>
+
+        <form #registerForm="ngForm" class="register__form" (ngSubmit)="onSubmitForm(registerForm)">
+            <label for="name">Pseudo :</label>
+            <input type="text" id="name" name="name" [(ngModel)]="userName">
+
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" [(ngModel)]="password">
+
+            <label for="validatePassword">Confirmation du mot de passe :</label>
+            <input type="password" id="validatePassword" name="validatePassword" [(ngModel)]="validatePassword">
+
+            <button class="validate-button" type="submit">Valider</button>
+        </form>
+
+    </div>
+
+</section>

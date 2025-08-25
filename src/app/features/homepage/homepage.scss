@@ -15,13 +15,6 @@
         row-gap: 1rem;
     }
 
-    &__title {
-        color: v.$primary;
-        margin-bottom: 3rem;
-        font-family: slant;
-        font-size: 18vw;
-    }
-
     &__separator {
         background-color: v.$primary;
         height: 1px;
@@ -32,11 +25,6 @@
         font-size: 2rem;
         width: 65vw;
         padding: 1rem 0;
-        background-color: v.$primary;
-        color: v.$font-white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
 
         &:last-child {
             margin-bottom: 7rem;
@@ -68,7 +56,7 @@
         }
 
         &__button {
-            width: 40vw
+            width: 30vw
         }
 
         &__separator {
