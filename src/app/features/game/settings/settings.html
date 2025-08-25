@@ -1,0 +1,35 @@
+<section class="settings">
+
+    <app-return-button/>
+
+    <div class="setting__containers">
+        <h1 class="settings__title">MemoRush</h1>
+
+        <div class="settings__left">
+            
+            <form class="settings__form" [formGroup]="settingsForm">
+
+                <label for="name">Pseudo :</label>
+                <input type="text" id="name" formControlName="name">
+
+                <label for="theme">Thème des cartes :</label>
+                <select id="theme" formControlName="theme">
+                    <option value="choix1">Choix 1</option>
+                    <option value="choix2">Choix 2</option>
+                    <option value="choix3">Choix 3</option>
+                </select>
+
+                <label for="difficulty">Difficulté :</label>
+
+            </form>
+            
+            
+            <div class="settings__right">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
