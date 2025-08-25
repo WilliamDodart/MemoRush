@@ -1,0 +1,21 @@
+<section class="register">
+
+    <app-return-button/>
+
+    <div class="register__container">
+        <h1 class="register__title">MemoRush</h1>
+
+        <form #loginForm="ngForm" class="register__form" (ngSubmit)="onSubmitForm(loginForm)">
+            <label for="name">Pseudo :</label>
+            <input type="text" id="name" name="name" [(ngModel)]="userName">
+
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" [(ngModel)]="password">
+
+            <app-validate-button/>
+            
+        </form>
+
+    </div>
+
+</section>
