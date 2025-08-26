@@ -42,6 +42,8 @@
 .form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    height: 500px;
 }
 
 //Boutons du formulaire
@@ -72,14 +74,33 @@
     }
 }
 
-
-
 .active {
     color: v.$primary;
 }
 
+// Grille de jeu
+.preview {
+    width: 90vw;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    &__container {
+        width: 80%;
+        max-width: 400px;   
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr) ;
+    }
+}
 
+.carre {
+    aspect-ratio: 1/1;
+    background-color: v.$secondary;
+    margin: 0.5rem;
+    border-radius: 5px;
+}
 
 
 
@@ -96,9 +117,3 @@
 }
 
 
-
-.carre {
-    width: 500px;
-    height: 500px;
-    background-color: v.$secondary;
-}

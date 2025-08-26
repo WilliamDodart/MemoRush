@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ReturnButton } from '../../../shared/components/return-button/return-button';
-import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ValidateButton } from '../../../shared/components/validate-button/validate-button';
 import { PageType } from '../types/page-type.type';
 import { NgClass } from '@angular/common';
@@ -17,7 +17,8 @@ interface DifficultyInterface {
     ReturnButton,
     ReactiveFormsModule,
     ValidateButton,
-    NgClass
+    NgClass,
+    FormsModule
 ],
   templateUrl: './settings.html',
   styleUrl: './settings.scss'
@@ -47,7 +48,7 @@ export class Settings implements OnInit {
 
     this.settingsForm = this.formBuilder.group({
       name: [null],
-      theme: [null],
+      theme: ['default'],
       difficulty: ['medium'],
       sound: [true],
     })
@@ -63,6 +64,10 @@ export class Settings implements OnInit {
 
   changingDifficulty(difficultyName: DifficultiesType): void {
     this.settingsForm.get('difficulty')?.setValue(difficultyName);
+  }
+
+  changingSound(soundValue: boolean): void {
+    this.settingsForm.get('sound')?.setValue(soundValue);
   }
 
 }

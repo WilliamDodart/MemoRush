@@ -26,7 +26,7 @@
     <div class="settings__container">     
         <!-- Affichage conditionnel -->
         @if (page ==='infos') {
-            <form class="settings__form form" [formGroup]="settingsForm">
+            <form class="settings__form form" [formGroup]="settingsForm" (ngSubmit)="onSubmitForm()" >
 
                 <label for="name">Pseudo :</label>
                 <input type="text" id="name" formControlName="name">
@@ -61,23 +61,43 @@
                          @for (sound of sounds; track sound.value) {
                              <button
                              type="button"
-                             (click)="settingsForm.get('sounds')?.setValue(sound.value)"
-                             [class.selected]="settingsForm.get('sounds')?.value === sound.value"
+                             (click)="changingSound(sound.value)"
+                             [ngClass]="{selected: settingsForm.get('sound')?.value === sound.value}"
                              class="form__button">
                              {{sound.label}}
                             </button>
                         }
                     </div>
                 </div>
-
                     <app-validate-button/>
             </form>
         }            
         
         <!-- Affichage conditionnel de la preview -->
         @if (page === 'preview') {
-            <div class="settings__preview">
-                <div class="carre"></div>
+            <div class="settings__preview preview">
+                <div class="preview__container">
+                    <div class="carre"></div>
+                    <div class="carre"></div>
+                    <div class="carre"></div>
+                    <div class="carre"></div>
+                    <div class="carre"></div>
+                    <div class="carre"></div>
+                    <div class="carre"></div>
+                    <div class="carre"></div>
+                    <div class="carre"></div>
+                    <div class="carre"></div>
+                    <div class="carre"></div>
+                    <div class="carre"></div>
+                    <div class="carre"></div>
+                    <div class="carre"></div>
+                    <div class="carre"></div>
+                    <div class="carre"></div>
+                    <div class="carre"></div>
+                    <div class="carre"></div>
+                    <div class="carre"></div>
+                    <div class="carre"></div>
+                </div>
             </div>
         }
 
