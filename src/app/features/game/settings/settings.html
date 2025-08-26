@@ -2,12 +2,20 @@
 
     <app-return-button/>
 
-    <div class="setting__containers">
-        <h1 class="settings__title">MemoRush</h1>
+    <h1 class="settings__title">MemoRush</h1>
 
-        <div class="settings__left">
+    <!-- Changement de l'affichage -->
+    <div class="settings__switch">
+        <button type="button" class="settings__link">Paramètres</button>
+        <div class="settings__separator"></div>
+        <button type="button" class="settings__link">Preview</button>
+    </div>
+
+    <!-- Contenu principal de la page -->
+    <div class="settings__container">
             
-            <form class="settings__form" [formGroup]="settingsForm">
+            <!-- Formulaire de paramétrage du jeu -->
+            <form class="settings__form form" [formGroup]="settingsForm">
 
                 <label for="name">Pseudo :</label>
                 <input type="text" id="name" formControlName="name">
@@ -19,16 +27,46 @@
                     <option value="choix3">Choix 3</option>
                 </select>
 
-                <label for="difficulty">Difficulté :</label>
+                <!-- Modification de la difficulté du jeu -->
+                 <div class="settings__difficulties difficulties">
+                     <label for="difficulty">Difficulté :</label>
+                     <div class="difficulties__container">
+                         @for (difficulty of difficulties; track difficulty.value) {
+                             <button
+                             type="button"
+                             (click)="settingsForm.get('difficulties')?.setValue(difficulty.value)" 
+                             [class.selected]="settingsForm.get('difficulties')?.value === difficulty.value"
+                             class="form__button">
+                             {{difficulty.label}}
+                            </button>
+                        }
+                    </div>
+                </div>
 
-            </form>
-            
-            
-            <div class="settings__right">
+                <!-- Gestion du son pendant la partie -->
+                 <div class="settings__sounds">
+                     <label for="sound">Son du jeu :</label>
+                     <div class="sounds__container">
+                         @for (sound of sounds; track sound.value) {
+                             <button
+                             type="button"
+                             (click)="settingsForm.get('sounds')?.setValue(sound.value)"
+                             [class.selected]="settingsForm.get('sounds')?.value === sound.value"
+                             class="form__button">
+                             {{sound.label}}
+                            </button>
+                        }
+                    </div>
+                </div>
 
-            </div>
+                    <app-validate-button/>
+            </form>            
+        
+        
+        <!-- <div class="settings__preview">
+            <div class="carre"></div>
+        </div> -->
 
-        </div>
 
     </div>
 
