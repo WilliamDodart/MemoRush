@@ -18,7 +18,7 @@
     &__separator {
         width: 1px;
         height: 2rem;
-        background: v.$secondary;
+        background: v.$primary;
     }
 
     &__link {
@@ -26,6 +26,15 @@
         font-size: 2rem;
         color: v.$secondary;
         cursor: pointer;
+
+        &:hover {
+            color: v.$primary-hover;
+            transform: scale(1.05);
+        }
+
+        &:active {
+            transform: scale(0.98);
+        }
     }
 }
 
@@ -47,11 +56,26 @@
         font-weight: 300;
         width: 100px;
         margin-right: 1rem;
+
+        &:hover {
+            background-color: v.$secondary-hover;
+            transform: none;
+        }
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &.selected {
+            background-color: v.$primary;
+        }
     }
 }
 
-.selected {
-    background-color: v.$primary;
+
+
+.active {
+    color: v.$primary;
 }
 
 

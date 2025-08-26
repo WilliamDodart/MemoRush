@@ -6,15 +6,26 @@
 
     <!-- Changement de l'affichage -->
     <div class="settings__switch">
-        <button type="button" class="settings__link">Paramètres</button>
+        <button
+        type="button"
+        class="settings__link"
+        (click)="onClickDisplayPage('infos')"
+        [ngClass]="{active: page === 'infos'}" >
+            Paramètres
+        </button>
         <div class="settings__separator"></div>
-        <button type="button" class="settings__link">Preview</button>
+        <button
+        type="button"
+        class="settings__link"
+        (click)="onClickDisplayPage('preview')"
+        [ngClass]="{active: page === 'preview'}" >
+            Preview
+        </button>
     </div>
 
-    <!-- Contenu principal de la page -->
-    <div class="settings__container">
-            
-            <!-- Formulaire de paramétrage du jeu -->
+    <div class="settings__container">     
+        <!-- Affichage conditionnel -->
+        @if (page ==='infos') {
             <form class="settings__form form" [formGroup]="settingsForm">
 
                 <label for="name">Pseudo :</label>
@@ -34,10 +45,10 @@
                          @for (difficulty of difficulties; track difficulty.value) {
                              <button
                              type="button"
-                             (click)="settingsForm.get('difficulties')?.setValue(difficulty.value)" 
-                             [class.selected]="settingsForm.get('difficulties')?.value === difficulty.value"
-                             class="form__button">
-                             {{difficulty.label}}
+                             class="form__button"
+                             (click)="changingDifficulty(difficulty.value)" 
+                             [ngClass]="{selected: settingsForm.get('difficulty')?.value === difficulty.value}" >
+                                {{difficulty.label}}
                             </button>
                         }
                     </div>
@@ -60,12 +71,15 @@
                 </div>
 
                     <app-validate-button/>
-            </form>            
+            </form>
+        }            
         
-        
-        <!-- <div class="settings__preview">
-            <div class="carre"></div>
-        </div> -->
+        <!-- Affichage conditionnel de la preview -->
+        @if (page === 'preview') {
+            <div class="settings__preview">
+                <div class="carre"></div>
+            </div>
+        }
 
 
     </div>
