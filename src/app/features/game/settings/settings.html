@@ -25,7 +25,7 @@
 
     <div class="settings__container">     
         <!-- Affichage conditionnel -->
-        @if (page ==='infos') {
+        @if (page ==='infos' || isDesktop) {
             <form class="settings__form form" [formGroup]="settingsForm" (ngSubmit)="onSubmitForm()" >
 
                 <label for="name">Pseudo :</label>
@@ -74,9 +74,11 @@
         }            
         
         <!-- Affichage conditionnel de la preview -->
-        @if (page === 'preview') {
+        @if (page === 'preview' || isDesktop) {
             <div class="settings__preview preview">
-                <div class="preview__container">
+                <div
+                class="preview__container"
+                [ngClass]="settingsForm.get('difficulty')?.value">
                     <div class="carre"></div>
                     <div class="carre"></div>
                     <div class="carre"></div>
@@ -100,7 +102,6 @@
                 </div>
             </div>
         }
-
 
     </div>
 

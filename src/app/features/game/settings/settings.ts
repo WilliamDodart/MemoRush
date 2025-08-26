@@ -27,7 +27,7 @@ interface DifficultyInterface {
 
 export class Settings implements OnInit {
   page!: PageType;
-
+  isDesktop!: boolean;
   settingsForm!: FormGroup;
 
   difficulties: DifficultyInterface[] = [
@@ -41,17 +41,24 @@ export class Settings implements OnInit {
     { label: "Non", value: false}
   ];
 
+
   constructor( private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
-    this.page = 'infos';
+    this.checkScreenWidth();
+    window.addEventListener('resize', () => this.checkScreenWidth()); 
 
+    this.page = 'infos';
     this.settingsForm = this.formBuilder.group({
       name: [null],
       theme: ['default'],
       difficulty: ['medium'],
       sound: [true],
     })
+  }
+
+  checkScreenWidth(): void {
+     this.isDesktop = window.innerWidth >= 1340;
   }
 
   onSubmitForm(): void {

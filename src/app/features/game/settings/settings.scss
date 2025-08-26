@@ -89,10 +89,25 @@
     &__container {
         width: 80%;
         max-width: 400px;   
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(5, 1fr) ;
-    }
+    }  
+}
+
+.easy {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr) ;
+}
+
+.medium {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr) ;
+}
+
+.hard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr) ;
 }
 
 .carre {
@@ -106,14 +121,57 @@
 
 
 
-@media screen and (width: 768px) {
+@media screen and (min-width: 1340px) {
     .settings {
 
-            &__title {
-            font-size: 10rem;
-            margin: 0;
+        &__title {
+            font-size: 14rem;
+            margin-bottom: 0;
+        }
+
+        &__switch {
+            display: none;
+        }
+
+        &__container {
+            display: flex;
+            justify-content: center;
+            column-gap: 5rem;
+            margin-bottom: 12rem;
         }
     }
+
+    .form {
+        width: 500px;
+    }
+
+    // Grille de jeu
+    .preview {
+        width: 500px;
+        justify-content: end;
+        
+        &__container {
+            margin-bottom: 1rem;
+            width: 90%;
+            max-width: 550px;   
+        }
+    }
+
+    .easy {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr) ;
+    }
+
+    .medium {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr) ;
+    }
+
+    .hard {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(4, 1fr) ;
+    }
 }
-
-
