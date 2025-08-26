@@ -77,4 +77,18 @@ export class Settings implements OnInit {
     this.settingsForm.get('sound')?.setValue(soundValue);
   }
 
+  getCardsCount(): number {
+    const difficulty = this.settingsForm.get('difficulty')?.value;
+    switch (difficulty) {
+      case 'easy':
+        return 16;
+      case 'medium':
+        return 20;
+      case 'hard':
+        return 24;
+      default:
+        return 20;
+    }
+  }
+
 }

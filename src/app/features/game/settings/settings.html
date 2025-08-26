@@ -79,26 +79,10 @@
                 <div
                 class="preview__container"
                 [ngClass]="settingsForm.get('difficulty')?.value">
-                    <div class="carre"></div>
-                    <div class="carre"></div>
-                    <div class="carre"></div>
-                    <div class="carre"></div>
-                    <div class="carre"></div>
-                    <div class="carre"></div>
-                    <div class="carre"></div>
-                    <div class="carre"></div>
-                    <div class="carre"></div>
-                    <div class="carre"></div>
-                    <div class="carre"></div>
-                    <div class="carre"></div>
-                    <div class="carre"></div>
-                    <div class="carre"></div>
-                    <div class="carre"></div>
-                    <div class="carre"></div>
-                    <div class="carre"></div>
-                    <div class="carre"></div>
-                    <div class="carre"></div>
-                    <div class="carre"></div>
+
+                    @for (item of [].constructor(getCardsCount()); track $index) {
+                        <div class="carre"></div>
+                    }
                 </div>
             </div>
         }
