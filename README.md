@@ -24,7 +24,7 @@ Les joueurs pourront se connecter, choisir leur niveau de difficulté et leur th
 ![Accueil](./public/screenshots/mobile/homepage_mobile.png)
 ![Settings](./public/screenshots/mobile/settings_mobile.png)
 
-(Captures d’écran à venir)
+(Autres captures d’écran à venir)
 
 
 ## ✨ Fonctionnalités prévues
