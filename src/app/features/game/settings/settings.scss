@@ -112,9 +112,21 @@
 
 .carre {
     aspect-ratio: 1/1;
-    background-color: v.$secondary;
+    background-color: v.$secondary-hover;
     margin: 0.5rem;
     border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & p {
+        background-color: v.$secondary;
+        font-family: slant;
+        color: v.$backgroundTwo;
+        font-size: 3rem;
+        border-radius: 5px;
+        padding: 1.5rem;
+    }
 }
 
 

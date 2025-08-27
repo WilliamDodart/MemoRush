@@ -81,7 +81,9 @@
                 [ngClass]="settingsForm.get('difficulty')?.value">
 
                     @for (item of [].constructor(getCardsCount()); track $index) {
-                        <div class="carre"></div>
+                        <div class="carre">
+                            <p>MR</p>
+                        </div>
                     }
                 </div>
             </div>
