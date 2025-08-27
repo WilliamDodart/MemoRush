@@ -3,9 +3,8 @@
 ![Frontend](https://img.shields.io/badge/-Frontend-007ACC?style=flat&logo=webcomponents&logoColor=white) ![Angular](https://img.shields.io/badge/-Angular-DD0031?style=flat&logo=angular&logoColor=white) ![TypeScript](https://img.shields.io/badge/-TypeScript-3178C6?style=flat&logo=typescript&logoColor=white) ![SCSS](https://img.shields.io/badge/-SCSS-CC6699?style=flat&logo=sass&logoColor=white) ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white)
 
 
-MemoRush est une application web de type jeu de memory, développée avec Angular pour le frontend et Node.js/TypeScript pour le backend.
-Ce projet est encore en cours de développement, mais l’objectif est de proposer une expérience ludique et compétitive autour de la mémoire visuelle et de la rapidité.
-
+MemoRush est une application web de jeu de memory, développée avec Angular pour le frontend et Node.js pour le backend.
+Ce projet est encore en cours de développement, mais l’objectif est de proposer une expérience ludique et compétitive.
 Les joueurs pourront se connecter, choisir leur niveau de difficulté et leur thème de cartes, puis tenter de réaliser le meilleur score.
 
 ## 🌐 Démo
